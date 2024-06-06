@@ -93,11 +93,13 @@ namespace Immersal.Samples.Navigation
         public void HideAgent() 
         {
             agent.gameObject.SetActive(false);
+            isMoving = false;
         }
 
 
         public void SetAgent()
         {
+            isMoving = false;
             agent.gameObject.SetActive(false);
             Vector3 startPosition = Camera.main.transform.position + Camera.main.transform.forward * startDistance;
             agent.Warp(startPosition);

@@ -503,21 +503,28 @@ namespace Immersal.Samples.Navigation
         }
 
         private string DetermineTurnDirection(Vector3 currentDirection, List<Vector3> pathCorners)
-        {   
-            Vector3 nextDirection = Vector3.zero;
-
-            if (pathCorners.Count > 2)
+        {
+            if (pathCorners.Count <= 2)
             {
-                nextDirection = (pathCorners[2] - pathCorners[1]).normalized;
+                return "Straight";
             }
 
-            float crossProduct = Vector3.Cross(currentDirection, nextDirection).y; // compute the cross product to determine the turn direction
+            Vector3 nextDirection = (pathCorners[2] - pathCorners[1]).normalized;
 
-            if (crossProduct > 0)
+            Vector2 currentDir2D = new Vector2(currentDirection.x, currentDirection.z); // project directions onto the XZ plane
+            Vector2 nextDir2D = new Vector2(nextDirection.x, nextDirection.z);
+
+            float determinant = currentDir2D.x * nextDir2D.y - currentDir2D.y * nextDir2D.x; // 2D cross product
+
+            Debug.Log($"Current Direction: {currentDirection}, Next Direction: {nextDirection}, Determinant: {determinant}");
+
+            float threshold = 0.01f; // small threshold to avoid small deviations causing incorrect turn directions
+
+            if (determinant > threshold)
             {
                 return "Left";
             }
-            else if (crossProduct < 0)
+            else if (determinant < -threshold)
             {
                 return "Right";
             }
