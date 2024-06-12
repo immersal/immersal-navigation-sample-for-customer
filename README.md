@@ -30,7 +30,7 @@ To get started with the Navigation Demo App, follow these steps:
     - Click on the `Open` button and select the cloned repository folder.
 
 3. **Explore the Sample Scenes**:
-    - Open the `Scenes` folder in the Unity Project window.
+    - Navigate to the `Assets/Samples/Immersal SDK/2.0.2/Core Samples/Scenes` folder.
     - Explore and run the sample scenes to see the different features in action.
 
 ## Usage
