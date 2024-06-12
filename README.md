@@ -6,15 +6,15 @@ This repo contains a collection of sample scenes demonstrating navigation featur
 
 ## Features
 
-1. **Off-Screen Indicator**: Provides visual cues (an arrow) to guide users toward off-screen targets.
+1. **Off-Screen Indicator**: Displays an indicator arrow at the edge of the screen pointing towards the off-screen targets.
 2. **Waypoint Navigation**: Displays turn arrows and distance to guide users from one waypoint to another.
 3. **Onboarding Animation**: Introduces users to the application with engaging animations. Shows the animation again upon track lost.
 4. **Responsive Navigation Agent**: A robot that can guide users toward targets, stop or adjust speed based on user movement, and display dialogs.
 
 ## Sample Scenes
 
-- **xx**: Demonstrates the core navigation functionality in an office setting.
-- **xx**: Shows the navigation usage in an exhibition hall.
+- **LeicaHKOffice**: Demonstrates the core navigation functionality in an office setting.
+- **LeicaHKExhibition**: Shows the navigation usage in an exhibition hall.
 
 ## Getting Started
 
@@ -34,22 +34,6 @@ To get started with the Navigation Demo App, follow these steps:
     - Explore and run the sample scenes to see the different features in action.
 
 ## Usage
-
-### Off-Screen Indicator
-This feature helps users locate off-screen targets by displaying indicators at the edge of the screen pointing towards the targets.
-
-### Waypoint Navigation
-Guides users from one waypoint to another using visual cues such as turn arrows and distance texts. Ideal for providing step-by-step directions.
-
-### Onboarding Animation
-Engages new users with animations that introduce the app's features and navigation controls.
-
-### Responsive Navigation Agent
-A robotic navigation agent that can adjust its behavior based on user movement. It can stop, change speed, and display dialogs to interact with users.
-
-## Customization
-
-Feel free to customize the scenes and features to suit your needs. The scripts and assets can be modified to enhance functionality or integrate with your own projects.
 
 ## Contributing
 
