@@ -117,6 +117,27 @@ namespace Immersal.Samples.Navigation
             float positionChange = Vector3.Distance(previousCameraPosition, currentCameraPosition); // user movement
             float userSpeed = (currentCameraPosition - previousCameraPosition).magnitude / Time.deltaTime;
 
+            if (userSpeed > userStopThreshold) // if the user is moving
+            {
+                stopTimer = 0f; 
+            }
+            else // if the user is stopped
+            {
+                stopTimer += Time.deltaTime;
+                if (stopTimer >= stopDelay+3f)
+                {
+                    agent.isStopped = true;
+                    animator.SetTrigger("Greet");
+                    DisplayMessage("Keep moving");
+                }
+                else
+                {
+                    agent.isStopped = false;
+                    animator.SetTrigger("Move");
+                    DisplayMessage("Follow me");
+                }
+            }
+
             if (distance > maxDistance)
             {
                 if (userSpeed > userStopThreshold) // if the user is moving, adjust agent speed
