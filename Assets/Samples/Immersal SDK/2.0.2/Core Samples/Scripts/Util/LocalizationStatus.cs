@@ -20,7 +20,8 @@ namespace Immersal.Samples.Util
     [RequireComponent(typeof(TextMeshProUGUI))]
     public class LocalizationStatus : MonoBehaviour
     {
-        private const string StringFormat = "Successful localizations: {0}/{1}";
+        // private const string StringFormat = "Successful localizations: {0}/{1}";
+        private const string StringFormat = "{0}/{1}";
 
         private TextMeshProUGUI m_LabelText;
         private ImmersalSDK m_Sdk;

@@ -8,12 +8,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Samples/Immersal SDK/2.0.2/Core Samples/Scenes/NavigationSampleNavMesh.unity
     guid: 79da963abc80f419885aae021d59747d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Samples/Immersal SDK/2.0.2/Core Samples/Scenes/LeicaHKOffice.unity
     guid: d7a22902755cb46cc821f41c00750f60
   - enabled: 0
     path: Assets/Samples/Immersal SDK/2.0.2/Core Samples/Scenes/nav-test.unity
     guid: 2298592950264444d92c6f5087a050af
+  - enabled: 1
+    path: Assets/Scenes/LMHKOffice.unity
+    guid: fc8a23cdbad73428f9d1342f39064b5a
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 303cdef727ea84962ac67ecc4f64b36f, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: f9d1d21d2f65444e1838729bb8066e63, type: 2}
