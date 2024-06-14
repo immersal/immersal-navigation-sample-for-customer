@@ -92,7 +92,7 @@ namespace Immersal.Samples.Navigation
         [SerializeField]
         private float m_pathWidth = 0.3f;
         [SerializeField]
-        private float m_heightOffset = 0.5f;
+        private float m_heightOffset = 0f; // 0.5f
 
         // Navigation State Events
         [Header("Events")]
@@ -158,8 +158,8 @@ namespace Immersal.Samples.Navigation
         {
             InitializeNavigationManager();
 
-            NavigatingUI.SetAlpha(0);
-            PreNavigatingUI.SetAlpha(1); // 
+            // NavigatingUI.SetAlpha(1); //
+            // PreNavigatingUI.SetAlpha(1); // 
 
             if (m_managerInitialized)
             {
@@ -450,10 +450,12 @@ namespace Immersal.Samples.Navigation
                 case NavigationState.NotNavigating:
                     // m_StopNavigationButton.SetActive(false);
                     m_navigationPathObject.SetActive(false);
+
                     // m_offScreenIndicator.SetActive(false);
                     // m_turnArrow.gameObject.SetActive(false);
                     // m_distanceText.gameObject.SetActive(false);
-                    PreNavigatingUI.FadeIn(0.5f);
+
+                    PreNavigatingUI.FadeIn(0.5f, 1f);
                     NavigatingUI.FadeOut(0.5f);
 
                     // m_agentController.DisplayMessage("You have arrived at your destination!");
@@ -463,10 +465,12 @@ namespace Immersal.Samples.Navigation
                 case NavigationState.Navigating:
                     // m_StopNavigationButton.SetActive(true);
                     m_navigationPathObject.SetActive(true);
+
                     // m_turnArrow.gameObject.SetActive(true);
                     // m_distanceText.gameObject.SetActive(true);
+
                     PreNavigatingUI.FadeOut(0.5f);
-                    NavigatingUI.FadeIn(0.5f);
+                    NavigatingUI.FadeIn(0.5f, 1f);
                     break;
             }
         }

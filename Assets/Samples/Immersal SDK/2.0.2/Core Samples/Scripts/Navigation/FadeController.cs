@@ -23,20 +23,20 @@ namespace Immersal.Samples.Navigation
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 OnboardingUI.FadeOut(1); 
-                NavUI.FadeIn(0.8f);
+                NavUI.FadeIn(0.8f, 1f);
                 PreNavigatingUI.SetAlpha(1);
             }
 
             if (Input.GetKeyDown(KeyCode.Return))
             {
-                OnboardingUI.FadeIn(1); 
+                OnboardingUI.FadeIn(1, 0.8f); 
                 NavUI.FadeOut(0.8f);
             }
         }
 
         public void showInstruction()
         {
-            OnboardingUI.FadeIn(1); 
+            OnboardingUI.FadeIn(1, 0.8f); 
             NavUI.FadeOut(0.8f);
             PreNavigatingUI.SetAlpha(1);
         }
@@ -44,7 +44,7 @@ namespace Immersal.Samples.Navigation
         public void hideInstruction()
         {
             OnboardingUI.FadeOut(1); 
-            NavUI.FadeIn(0.8f);
+            NavUI.FadeIn(0.8f, 1f);
         }
     }
 

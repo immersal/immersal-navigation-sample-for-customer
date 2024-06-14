@@ -34,9 +34,9 @@ namespace Immersal.Samples.Navigation
             StartCoroutine(FadeCanvasGroup(UI, UI.alpha, 0, duration));
         }
 
-        public void FadeIn(float duration)
+        public void FadeIn(float duration, float end)
         {
-            StartCoroutine(FadeCanvasGroup(UI, UI.alpha, 1, duration));
+            StartCoroutine(FadeCanvasGroup(UI, UI.alpha, end, duration));
         }
 
         private IEnumerator FadeCanvasGroup(CanvasGroup cg, float start, float end, float duration)
